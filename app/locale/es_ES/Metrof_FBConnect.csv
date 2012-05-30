@@ -1,0 +1,30 @@
+"Congratulations.  Your facebook account is now connected with our store.","Enhorabuena. Su cuenta de facebook ya est&aacute; conectada con nuestra tienda."
+"You can edit your shipping addresses in your account page.","Puede editar sus direcci&oacute;nes de env&iacute;o en zona de usuario."
+"Edit your shipping address: <a href=""%s"">click here.</a>","Edite su direcci&oacute;n de env&iacute;o: <a href=""%s"">click aqu&iacute;.</a>"
+"Add your e-mail: <a href=""%s"">click here.</a>","Establezca una direcci&oacute;n e-mail: <a href=""%s"">click  aqu&iacute;.</a>"
+"Or allow us to e-mail you via Facebook: <a target=""_blank"" href=""%s"">click here.</a>","O perm&iacute;tanos enviarle un e-mail a trav&eacute;s de Facebook: <a target=""_blank"" href=""%s"">click aqu&iacute;.</a>"
+"Welcome, %s!","Bienvenido, %s!"
+"Welcome back, %s!","Bienvenido de nuevo, %s!"
+"Allow us to e-mail you via Facebook: <a target=""_blank"" href=""%s"">click here.</a>","Perm&iacute;tanos enviarle un e-mail a trav&eacute;s de Facebook: <a target=""_blank"" href=""%s"">click aqu&iacute;.</a>"
+"If you previously used Facebook connect, click below.","Si has usado Facebook connect anteriormente, haz click abajo."
+"If you already have an account you can connect it with Facebook from your account page.","If you already have an account you can connect it with Facebook from your account page."
+"Use your Facebook account for super-fast logins.","Utiliza tu cuenta de Facebook para hacer un registro o acceso super-r&aacute;pido."
+
+;admin screens
+"Enable Facebook Connect features","Enable Facebook Connect features"
+"API Key","API Key"
+"App Secret","App Secret"
+
+;FB notification
+"Visit your account.","Visit your account."
+
+;account page
+"Connect to an existing Account","Connect to an existing Account"
+"Enter your current username and password to connect your Facebook account with a previously registered account.","Enter your current username and password to connect your Facebook account with a previously registered account."
+"Email Address","Email Address"
+"Password","Password"
+"* Required Fields","* Required Fields"
+
+"Email Connect","Email Connect"
+"Here you can elect to receive full emails from our store to your normal email account via Facebook. At any time you can turn off the ability to receive emails.","Here you can elect to receive full emails from our store to your normal email account via Facebook. At any time you can turn off the ability to receive emails."
+"Change your Facebook email connect settings: <a target="_blank" href="%s">click here.</a>","Change your Facebook email connect settings: <a target="_blank" href="%s">click here.</a>"

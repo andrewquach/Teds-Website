@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+      <modules>
+        <Teddy_MassCoupons>
+          <version>0.1.0</version>
+        </Teddy_MassCoupons>
+      </modules>
+	<frontend>
+      <routers>
+        <MassCoupons>
+          <use>standard</use>
+         <args>
+           <module>Teddy_MassCoupons</module>
+           <frontName>masscoupons</frontName>
+         </args>
+        </MassCoupons>
+      </routers>
+    </frontend>
+</config> 

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="root">
+			<reference name="top.links">
+				<remove name="checkout_cart_link"/>
+				<block type="checkout/links" name="checkout_cart_link_custom">
+					<action method="addCartLink"></action>
+				</block>
+			</reference>
+		</reference>
+	</default>
+	<customer_logged_out>
+		<!-- Removes 'Log In' link - Default position: 60 -->
+		<reference name="top.links">
+			<action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>
+		</reference>
+	</customer_logged_out>
+	<customer_logged_in>
+		<!-- Removes 'Log In' link - Default position: 60 -->
+		<reference name="top.links">
+			<action method="removeLinkByUrl"><url helper="facebook/getConnectUrl"/></action>
+		</reference>
+	</customer_logged_in>
+</layout>
+ 

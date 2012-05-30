@@ -1,0 +1,75 @@
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+    $_gallery = $this->getGalleryImages();
+
+    $_resize = 350;
+?>
+
+<style type="text/css">
+    .product-img-box .more-views li.slide-current a{ border:2px solid #aaa; }
+    .product-img-box .product-image-zoom img { cursor: pointer; }
+    #slide-loader{ visibility:hidden; position:absolute; top:auto; left:auto; right:2px; bottom:2px; width: 25px; height: 25px; }
+</style>
+
+<script type="text/javascript">
+function slide(url,num,gallery){
+    if (typeof slide.loading == 'undefined') slide.loading = false;
+    if(slide.loading) return false;
+
+    var loader = new Image();
+    $(loader).observe('load', function(){
+
+        $('slide-loader').setStyle({'visibility':'hidden'});
+
+        $$('div.more-views li').each(function(el,i){
+            (i==num) ? el.addClassName('slide-current') : el.removeClassName('slide-current');
+        });
+
+        var dummy = new Element('img', { src: url }).setOpacity(0);
+        new Insertion.After('image', dummy);
+        new Effect.Opacity(dummy, { duration:.5, from:0, to:1.0 });
+        new Effect.Opacity($('image'), { duration:.5, from:1.0, to:0, 
+             afterFinish: function(){
+                $('image').writeAttribute('src',url).setOpacity(1).observe('click',function(e){
+                    Event.stop(e);
+                    popWin(gallery, 'gallery', 'width=300,height=300,left=50,top=50,location=no,status=yes,scrollbars=yes,resizable=yes'); 
+                    return false;
+
+                 })
+                dummy.remove();
+                slide.loading = false;
+             }
+        });
+    });
+
+    $('slide-loader').setStyle({'visibility':'visible'});
+    loader.src=url;
+
+    slide.loading = true;
+return false;
+}
+</script>
+
+
+<p class="product-image-zoom">
+    <?php
+        $_img = '<a class="thickbox" href="'.$this->helper('catalog/image')->init($_product, 'image').'" title="'.$this->htmlEscape($this->getImageLabel()).'"><img id="image" src="'.$this->helper('catalog/image')->init($_product, 'image').'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" /></a>';
+        echo $_helper->productAttribute($_product, $_img, 'image')
+    ?>
+    <img id="slide-loader" src="<?php echo $this->getSkinUrl('images/lightbox/loading.gif') ?>" />
+</p>
+<!-- <p class="a-center" id="track_hint"><?php echo $this->__('Click on above image to view full picture') ?></p> -->
+
+<?php if (count($_gallery) > 0): ?>
+<div class="more-views">
+    <h4><?php echo $this->__('More Views') ?></h4>
+    <ul>
+    <?php foreach ($_gallery as $_image): ?>
+        <li>
+            <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile()); ?>" onclick="slide('<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile()) ?>',<?php echo ($s = isset($s) ? ++$s : 0) ?>,'<?php echo $this->getGalleryUrl($_image) ?>'); return false;"><img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(65); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>

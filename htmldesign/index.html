@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ted's</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="slider/nivo-slider.css" type="text/css" media="screen" />
+<!--[if IE]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- SIMPLY INCLUDE THE JS FILE! -->
+</head>
+<body>
+
+<section id="contentcontainer"> <!-- HTML5 section tag for the content 'section' -->
+
+	<header> <!-- HTML5 header tag -->
+		<div class="logo">
+        	<a href="index.html" title="Ted's">Ted's</a>
+        </div>
+        
+		<div class="hd-right">
+        	<div class="searchbox">
+            	
+        	  	<input name="textfield" type="text" class="input" id="textfield" value="Search entire store here">
+              	<input name="submit" type="submit" class="sbtn" id="submit" value="SEARCH">
+        	</div>
+	        <div class="clr"></div>
+            
+          <div class="toplink">
+            <ul>
+              <li><a href="#">Welcome, Andrew Wolverine</a></li>
+			  <li><a href="#">My Account</a></li>
+              <li><a href="logout.html">Log Out</a></li>
+			  <li><a href="#" class="carticon">Checkout(3)</a></li>
+            </ul>
+          </div>
+          <div class="clr"></div>
+          
+	   </div>
+       <div class="clr"></div>
+	</header><!-- End header tag -->
+    
+    <div id="navi">
+    	<nav> <!-- HTML5 navigation tag -->
+	  		<ul>
+                <li><a href="shirt.html" title="Shirt">Shirt </a></li>
+                <li><a href="#" title="POLO Shirt">POLO Shirt</a></li>
+                <li><a href="#" title="T-Shirt">T-Shirt</a></li>
+                <li><a href="#" title="Sale">Sale</a></li>
+                <li class="last"><a href="#" title="Blog">Blog</a></li>
+	  		</ul>	
+            <div class="clr"></div>			
+    	</nav>
+            
+    	<!--<div class="social-icon">
+        	<a href="http://www.facebook.com" title="Facebook"><img src="images/fb.png" alt="Facebook"></a> 
+           	<a href="http://www.twitter.com" title="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+        </div>-->
+    	<div class="clr"></div>
+    </div>
+
+  <div id="banner"><!-- Banner Part -->
+	<div id="slider" class="nivoSlider">
+        <img src="images/banner3.jpg" alt="" width="960" height="530" />
+        <img src="images/banner.jpg" alt="" width="960" height="530" />
+        <img src="images/banner2.jpg" width="960" height="530" />
+     </div>
+  </div>
+  
+  <div class="clr"></div>
+ 
+  <div class="threebox"><!-- Box One -->
+  	<div class="heading"><span class="blue-text">Never miss out on your size <br/>
+ or any other deal again</span>
+    </div>
+ 	<dl> 
+    	<dt></dt> 
+    	<dd>Join our mailing list</dd> 
+  	</dl>
+  	<dl> 
+    	<dt><label for="name">Name:</label></dt> 
+    	<dd><input name="name" type="text" class="input" id="name"></dd> 
+  	</dl>
+  	<dl> 
+    	<dt><label for="email">Email:</label></dt> 
+    	<dd><input name="email" type="text" class="input" id="email"></dd> 
+	</dl>
+    <div class="joinbtn-aln">
+    	<input name="button" type="submit" class="joinbtn" value="Join">
+        <div class="clr"></div>
+    </div>
+  </div>
+  
+  <div class="threebox"><!-- Box Two -->
+  	<div class="heading">Enjoy Greater CONVENIENT</div>
+    <div class="smsus"><img src="images/smsus.gif" alt="SMS US"></div>
+    <div class="smsnumber">at <strong>8368 8392</strong> to order</div>
+  </div>
+  
+  <div class="threebox-last"><!-- Box Three -->
+  	<img src="images/refund.gif" width="313" height="174">
+  </div> 
+  
+  <div class="clr"></div>
+  
+  <footer><!-- HTML5 Footer tag -->
+    <ul>
+      <li><a href="#">How to purchase</a></li>
+      <li>&bull; <a href="#">Delivery</a></li>
+      <li>&bull; <a href="#">Return & Exchange</a></li>
+      <li>&bull; <a href="#">Measurement Guideline</a></li>
+      <li>&bull; <a href="#">About us</a></li>
+      <li>&bull; <a href="#">Contact us</a></li>
+      <li>&bull; <a href="#">FAQs</a></li>
+    </ul>
+  </footer>
+  
+  <div class="copyright">&copy; 2011 Ted’s. All rights reserved</div>
+  
+  <div class="paymentmethod">
+  	<img src="images/payment-icon.gif" alt="Payment" width="159" height="32">
+  </div>
+  <div class="clr"></div>
+  
+</section>
+
+<script type="text/javascript" src="slider/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="slider/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+
+</body>
+</html>

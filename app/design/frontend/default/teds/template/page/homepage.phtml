@@ -1,0 +1,110 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('slider/nivo-slider.css'); ?>" type="text/css" media="screen" />
+<!--<script src="<?php echo $this->getSkinUrl('js/snowstorm.js'); ?>"></script>
+<script>
+/*snowStorm.snowColor = '#D6D6D6'; // blue-ish snow!?
+snowStorm.flakesMaxActive = 120;  // show more snow on screen at once
+snowStorm.excludeMobile = true;
+snowStorm.snowCharacter = '&#x2744;';
+snowStorm.vMaxX = 9;
+snowStorm.vMaxY = 5;
+snowStorm.randomizeWind();
+snowStorm.followMouse = false;*/
+</script>-->
+</head>
+
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+
+	<section id="contentcontainer"> <!-- HTML5 section tag for the content 'section' -->
+	<?php echo $this->getChildHtml('global_notices') ?>
+
+	<?php echo $this->getChildHtml('header') ?>
+
+		<div id="banner"><!-- Banner Part -->
+			<?php echo $this->getChildHtml('global_messages') ?>
+			<div style="height:530px; ">
+			<?php echo $this->getChildHtml('content') ?>
+			</div>
+		</div>
+		<div class="clr"></div>
+	 
+		<div class="threebox" style="position:relative;"><!-- Box One -->
+			<div class="heading">Join our mailing list <br/>and enjoy <span class="blue-text">$3 discount</span> instantly<br/><br/></span></div>
+			
+			<form action="<?php echo $this->getUrl('newsletter/subscriber/new') ?>" method="post" id="newsletter-validate-detail">
+				<dl> 
+					<dt><label for="email">Email:</label></dt> 
+					<dd><input name="email" type="text" id="newsletter" class="required-entry validate-email input" /></dd> 
+				</dl>
+				<div class="joinbtn-aln">
+					<button type="submit" class="joinbtn"><span><?php echo $this->__('Join') ?></span></button>
+					<div class="clr"></div>
+				</div>
+				<div class="likefb"><img src="<?php echo $this->getSkinUrl('theme-images/Follow-us.png'); ?>" />&nbsp; &nbsp; &nbsp; <a href="http://facebook.com/teds.sg" target="_blank" title="Follow us on Facebook"><img src="<?php echo $this->getSkinUrl('theme-images/fb.png'); ?>" /></a> <a href="http://twitter.com/Teds_shop" target="_blank" title="Follow us on Twitter"><img src="<?php echo $this->getSkinUrl('theme-images/twitter.png'); ?>" /></a></div>
+				
+				<script type="text/javascript">
+                //<![CDATA[
+                    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+                //]]>
+                </script>
+				
+			</form>
+			
+		</div>
+	  
+		<div class="threebox"><!-- Box Two -->
+			<div class="heading">Enjoy Greater CONVENIENCE</div>
+			<div class="smsus"><img src="<?php echo $this->getSkinUrl('theme-images/smsus.gif'); ?>" alt="SMS US"></div>
+			<div class="smsnumber">at <strong>9320 1329</strong> to order</div>
+		</div>
+	  
+		<div class="threebox-last"><!-- Box Three -->
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('return')->toHtml() ; ?>
+		</div> 
+	  
+		<div class="clr"></div>
+	  
+		<?php echo $this->getChildHtml('footer') ?>
+		<?php echo $this->getChildHtml('before_body_end') ?>
+	 
+		<div class="clr"></div>
+  
+	</section>
+
+</body>
+</html>

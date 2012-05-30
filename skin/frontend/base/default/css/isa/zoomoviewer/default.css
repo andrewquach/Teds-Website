@@ -1,0 +1,21 @@
+.main  .product-img-box .product-image,
+.product-info-box .product-img-box .product-image {
+	position: relative;
+	text-align: center;
+}
+
+.main  .product-img-box .product-image .zoomoviewer_logo,
+.product-info-box  .product-img-box .product-image .zoomoviewer_logo {
+	position: absolute;
+	top: auto;
+	left: auto;
+	right: 2px;
+	bottom: 2px;
+	cursor: pointer;
+	z-index: 1001;
+}
+
+.main  .product-img-box .product-image .no-zoom-image,
+.product-info-box  .product-img-box .product-image .no-zoom-image {
+	cursor: default;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @company    GuruWebSoft-Guru In Web Solutions <www.guruwebsoft.com> 
+ * @author     Rajendra K Bhatta <rajen_k_bhtt@hotmail.com>
+ *
+ * @category   MagentoPycho
+ * @package    MagentoPycho_Lightboxes 
+ */
+ -->
+<config>
+    <modules>
+        <MagentoPycho_Lightboxes>
+            <active>true</active>
+            <codePool>local</codePool>
+        </MagentoPycho_Lightboxes>
+    </modules>
+</config> 
